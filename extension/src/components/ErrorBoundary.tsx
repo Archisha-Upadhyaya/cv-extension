@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -27,14 +27,14 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="w-80 min-h-96 bg-gradient-to-br from-red-50 to-red-100 p-4">
+        <div className="w-80 min-h-96 bg-gray-900 p-4">
           <div className="text-center">
-            <h2 className="text-lg font-bold text-red-800 mb-4">🚨 Something went wrong</h2>
-            <div className="bg-white p-4 rounded-lg border border-red-200 text-left">
-              <p className="text-sm text-red-700 mb-2">
+            <h2 className="text-lg font-bold text-red-400 mb-4">🚨 Something went wrong</h2>
+            <div className="bg-gray-800 p-4 rounded-lg border border-red-700 text-left">
+              <p className="text-sm text-red-300 mb-2">
                 <strong>Error:</strong> {this.state.error?.message || 'Unknown error'}
               </p>
-              <details className="text-xs text-gray-600">
+              <details className="text-xs text-gray-400">
                 <summary className="cursor-pointer">Technical details</summary>
                 <pre className="mt-2 overflow-auto">{this.state.error?.stack}</pre>
               </details>

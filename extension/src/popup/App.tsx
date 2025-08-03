@@ -307,10 +307,10 @@ Generate a cover letter that would make this candidate stand out for this specif
   // Show loading state while initializing
   if (isLoading) {
     return (
-      <div className="w-80 min-h-96 bg-gradient-to-br from-blue-50 to-indigo-100 p-0 flex items-center justify-center">
+      <div className="w-80 min-h-96 bg-gray-900 p-0 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading extension...</p>
+          <div className="animate-spin h-8 w-8 border-4 border-blue-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <p className="text-gray-300">Loading extension...</p>
         </div>
       </div>
     )
@@ -330,11 +330,11 @@ Generate a cover letter that would make this candidate stand out for this specif
 
   if (showSettings) {
     return (
-      <div className="w-80 min-h-96 bg-gradient-to-br from-blue-50 to-indigo-100 p-0">
+      <div className="w-80 min-h-96 bg-gray-900 p-0">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-t-lg">
+        <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-4 rounded-t-lg">
           <h1 className="text-lg font-bold text-center">⚙️ Settings</h1>
-          <p className="text-blue-100 text-sm text-center mt-1">Configure your Gemini API key</p>
+          <p className="text-gray-300 text-sm text-center mt-1">Configure your Gemini API key</p>
         </div>
 
         <div className="p-4 space-y-4">
@@ -342,39 +342,39 @@ Generate a cover letter that would make this candidate stand out for this specif
           {status && (
             <div className={`p-3 rounded-lg text-sm ${
               status.includes('❌') || status.includes('Error')
-                ? 'bg-red-100 text-red-700 border border-red-200' 
-                : 'bg-green-100 text-green-700 border border-green-200'
+                ? 'bg-red-900 text-red-200 border border-red-700' 
+                : 'bg-green-900 text-green-200 border border-green-700'
             }`}>
               {status}
             </div>
           )}
 
-          <div className="bg-white rounded-lg p-4 shadow-sm border space-y-4">
+          <div className="bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-700 space-y-4">
             <div>
-              <h3 className="font-semibold text-gray-800 mb-2">🔑 Gemini API Key</h3>
-              <p className="text-sm text-gray-600 mb-3">
+              <h3 className="font-semibold text-gray-200 mb-2">🔑 Gemini API Key</h3>
+              <p className="text-sm text-gray-400 mb-3">
                 Get your free API key from: <br/>
                 <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-600 hover:underline">https://aistudio.google.com/app/apikey</a>
+                   className="text-blue-400 hover:underline">https://aistudio.google.com/app/apikey</a>
               </p>
               <input
                 type="password"
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 placeholder="Enter your Gemini API key (AIza...)"
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full p-3 border border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 text-gray-100 placeholder-gray-400"
               />
             </div>
 
-            <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
-              <h4 className="font-medium text-blue-800 mb-2">ℹ️ How to get API key:</h4>
-              <ol className="text-sm text-blue-700 space-y-1">
+            <div className="bg-gray-700 p-3 rounded-lg border border-gray-600">
+              <h4 className="font-medium text-gray-200 mb-2">ℹ️ How to get API key:</h4>
+              <ol className="text-sm text-gray-300 space-y-1">
                 <li>1. Visit Google AI Studio</li>
                 <li>2. Sign in with Google account</li>
                 <li>3. Click "Create API Key"</li>
                 <li>4. Copy and paste here</li>
               </ol>
-              <p className="text-xs text-blue-600 mt-2">
+              <p className="text-xs text-gray-400 mt-2">
                 🆓 Free tier: 15 requests/minute, 1M tokens/day
               </p>
             </div>
@@ -386,7 +386,7 @@ Generate a cover letter that would make this candidate stand out for this specif
                 className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
                   apiKey.trim()
                     ? 'bg-green-600 hover:bg-green-700 text-white'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'
                 }`}
               >
                 Save API Key
@@ -394,7 +394,7 @@ Generate a cover letter that would make this candidate stand out for this specif
               {apiKey && (
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="py-2 px-4 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-md font-medium transition-colors"
+                  className="py-2 px-4 bg-gray-600 hover:bg-gray-500 text-gray-200 rounded-md font-medium transition-colors"
                 >
                   Cancel
                 </button>
@@ -407,25 +407,25 @@ Generate a cover letter that would make this candidate stand out for this specif
   }
 
   return (
-    <div className="w-80 min-h-96 bg-gradient-to-br from-blue-50 to-indigo-100 p-0">
+    <div className="w-80 min-h-96 bg-gray-900 p-0">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-t-lg">
+      <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-4 rounded-t-lg">
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-lg font-bold">Cover Letter Generator</h1>
-            <p className="text-blue-100 text-sm mt-1">AI-powered job application assistant</p>
+            <p className="text-gray-300 text-sm mt-1">AI-powered job application assistant</p>
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => setShowResumeUploader(true)}
-              className="p-2 hover:bg-blue-700 rounded-md transition-colors"
+              className="p-2 hover:bg-gray-600 rounded-md transition-colors"
               title={resumeData ? 'Edit Resume' : 'Upload Resume'}
             >
               📄
             </button>
             <button
               onClick={() => setShowSettings(true)}
-              className="p-2 hover:bg-blue-700 rounded-md transition-colors"
+              className="p-2 hover:bg-gray-600 rounded-md transition-colors"
               title="Settings"
             >
               ⚙️
@@ -440,10 +440,10 @@ Generate a cover letter that would make this candidate stand out for this specif
         {status && (
           <div className={`p-3 rounded-lg text-sm ${
             status.includes('Error') || status.includes('❌') || status.includes('Failed')
-              ? 'bg-red-100 text-red-700 border border-red-200' 
+              ? 'bg-red-900 text-red-200 border border-red-700' 
               : status.includes('success') || status.includes('✅')
-              ? 'bg-green-100 text-green-700 border border-green-200'
-              : 'bg-blue-100 text-blue-700 border border-blue-200'
+              ? 'bg-green-900 text-green-200 border border-green-700'
+              : 'bg-blue-900 text-blue-200 border border-blue-700'
           }`}>
             {status}
           </div>
@@ -451,24 +451,24 @@ Generate a cover letter that would make this candidate stand out for this specif
 
         {/* Show Cover Letter or Job Description Section */}
         {showCoverLetter ? (
-          <div className="bg-white rounded-lg p-4 shadow-sm border">
+          <div className="bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-700">
             <div className="flex justify-between items-center mb-3">
-              <h3 className="font-semibold text-gray-800 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="font-semibold text-gray-200 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Generated Cover Letter
               </h3>
               <button
                 onClick={() => setShowCoverLetter(false)}
-                className="text-sm text-gray-500 hover:text-gray-700"
+                className="text-sm text-gray-400 hover:text-gray-200"
               >
                 ← Back
               </button>
             </div>
             
-            <div className="bg-gray-50 p-4 rounded border max-h-64 overflow-y-auto">
-              <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans leading-relaxed">
+            <div className="bg-gray-700 p-4 rounded border border-gray-600 max-h-64 overflow-y-auto">
+              <pre className="text-sm text-gray-200 whitespace-pre-wrap font-sans leading-relaxed">
                 {coverLetter}
               </pre>
             </div>
@@ -493,9 +493,9 @@ Generate a cover letter that would make this candidate stand out for this specif
             </div>
           </div>
         ) : (
-          <div className="bg-white rounded-lg p-4 shadow-sm border">
-            <h3 className="font-semibold text-gray-800 mb-3 flex items-center">
-              <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-700">
+            <h3 className="font-semibold text-gray-200 mb-3 flex items-center">
+              <svg className="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Job Description
@@ -506,7 +506,7 @@ Generate a cover letter that would make this candidate stand out for this specif
               disabled={isSelecting}
               className={`w-full py-2 px-4 rounded-md font-medium transition-colors ${
                 isSelecting
-                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                   : 'bg-blue-600 hover:bg-blue-700 text-white'
               }`}
             >
@@ -515,19 +515,19 @@ Generate a cover letter that would make this candidate stand out for this specif
 
             {selectedText && (
               <div className="mt-3">
-                <div className="bg-gray-50 p-3 rounded border max-h-32 overflow-y-auto">
-                  <p className="text-sm text-gray-700 line-clamp-4">
+                <div className="bg-gray-700 p-3 rounded border border-gray-600 max-h-32 overflow-y-auto">
+                  <p className="text-sm text-gray-200 line-clamp-4">
                     {selectedText.substring(0, 200)}
                     {selectedText.length > 200 ? '...' : ''}
                   </p>
                 </div>
                 <div className="flex justify-between mt-2">
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-400">
                     {selectedText.length} characters selected
                   </span>
                   <button
                     onClick={handleClearText}
-                    className="text-xs text-red-600 hover:text-red-800"
+                    className="text-xs text-red-400 hover:text-red-300"
                   >
                     Clear
                   </button>
@@ -546,7 +546,7 @@ Generate a cover letter that would make this candidate stand out for this specif
               className={`w-full py-3 px-4 rounded-md font-medium transition-colors flex items-center justify-center ${
                 selectedText.trim() && !isGenerating && apiKey
                   ? 'bg-green-600 hover:bg-green-700 text-white'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
               }`}
             >
               {isGenerating ? (
@@ -570,7 +570,7 @@ Generate a cover letter that would make this candidate stand out for this specif
         )}
 
         {/* Footer */}
-        <div className="text-center text-xs text-gray-500 pt-2 border-t">
+        <div className="text-center text-xs text-gray-400 pt-2 border-t border-gray-700">
           {!apiKey ? (
             '⚙️ Click settings to add your API key first'
           ) : !resumeData ? (

@@ -26,14 +26,14 @@ function TestApp() {
   }, [])
 
   return (
-    <div className="w-80 min-h-96 bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-      <h1 className="text-lg font-bold text-blue-800 mb-4">Extension Test</h1>
-      <p className="text-sm text-gray-700">{status}</p>
-      <div className="mt-4 p-3 bg-white rounded border">
-        <p className="text-xs text-gray-500">
+    <div className="w-80 min-h-96 bg-gray-900 p-4">
+      <h1 className="text-lg font-bold text-blue-400 mb-4">Extension Test</h1>
+      <p className="text-sm text-gray-300">{status}</p>
+      <div className="mt-4 p-3 bg-gray-800 rounded border border-gray-700">
+        <p className="text-xs text-gray-400">
           User Agent: {navigator.userAgent.substring(0, 50)}...
         </p>
-        <p className="text-xs text-gray-500">
+        <p className="text-xs text-gray-400">
           Location: {window.location.href}
         </p>
       </div>

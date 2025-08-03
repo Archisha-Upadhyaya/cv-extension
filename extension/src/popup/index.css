@@ -2,15 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for the popup */
+/* Custom styles for the popup - Dark Mode */
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 200px;
+  background-color: #0f0f0f;
+  color: #e5e5e5;
 }
 
 #root {
   width: 100%;
   height: 100%;
+  background-color: #0f0f0f;
+}
+
+/* Force dark mode for all inputs and form elements */
+input, textarea, select {
+  background-color: #1a1a1a !important;
+  color: #e5e5e5 !important;
+  border-color: #404040 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888888 !important;
+}
+
+/* Dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
