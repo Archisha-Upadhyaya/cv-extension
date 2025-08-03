@@ -37,7 +37,7 @@ After deployment:
 2. Click **"Settings"** → **"Environment Variables"**
 3. Add these variables:
    ```
-   GEMINI_API_KEY = AIzaSyAzeloHWpylZ_TQfSJ7X-iNcTf_566kNsA
+   GEMINI_API_KEY = your_actual_gemini_api_key_here
    GEMINI_MODEL = gemini-1.5-flash
    NODE_ENV = production
    ```
