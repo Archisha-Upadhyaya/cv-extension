@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "CV Extension",
+  "version": "1.0",
+  "description": "Generates cover letters from job posts.",
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": [
+    "storage", 
+    "scripting", 
+    "activeTab",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
